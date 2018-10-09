@@ -42,12 +42,12 @@ public class HotelHelper {
 		booking.addServiceCharge(ServiceType.ROOM_SERVICE, 7.00);
 		
 		IOUtils.trace("HotelHelper");
-		for (RoomType rt : RoomType.values()) {
-			Map<Integer, Room> rooms = hotel.roomsByType.get(rt);
-			for (Integer id : rooms.keySet()) {
-				IOUtils.outputln(rooms.get(id));
-			}
-		}		
+//		for (RoomType rt : RoomType.values()) {
+//			Map<Integer, Room> rooms = hotel.roomsByType.get(rt);
+//			for (Integer id : rooms.keySet()) {
+//				IOUtils.outputln(rooms.get(id));
+//			}
+//		}		
 		return hotel;
 	}
 

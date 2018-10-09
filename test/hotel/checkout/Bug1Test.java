@@ -51,7 +51,7 @@ public class Bug1Test {
     }
 
     @Test
-    public void testSomeMethod() {
+    public void testRoomIdEntered() {
         
         control.run();
         control.roomIdEntered(301);

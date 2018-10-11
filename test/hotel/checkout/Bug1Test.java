@@ -78,4 +78,13 @@ public class Bug1Test {
         double actual = serviceCharge.getCost();
         assertEquals(7.00, actual, 0.1);
     }
+    
+    @Test
+    public void testAddServiceCharge(){
+        Booking booking = hotel.findActiveBookingByRoomId(roomId);
+        booking.addServiceCharge(ServiceType.BAR_FRIDGE, 7.00);
+        List<ServiceCharge> charges = booking.getCharges();
+        double actual = charges.get(1).getCost();
+        assertEquals(7.00, actual, 0.1);
+    }
 }

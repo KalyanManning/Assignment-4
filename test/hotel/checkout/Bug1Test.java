@@ -16,6 +16,7 @@ import org.mockito.Mock;
 
 import hotel.entities.Hotel;
 import hotel.entities.ServiceCharge;
+import hotel.entities.ServiceType;
 import java.util.List;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
@@ -68,6 +69,13 @@ public class Bug1Test {
         Booking booking = hotel.findActiveBookingByRoomId(roomId);
         List<ServiceCharge> charges = booking.getCharges();
         double actual = charges.get(0).getCost();
+        assertEquals(7.00, actual, 0.1);
+    }
+    
+    @Test
+    public void testServiceCharge(){
+        ServiceCharge serviceCharge = new ServiceCharge(ServiceType.BAR_FRIDGE, 7.00);
+        double actual = serviceCharge.getCost();
         assertEquals(7.00, actual, 0.1);
     }
 }

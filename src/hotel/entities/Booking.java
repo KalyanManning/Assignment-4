@@ -18,7 +18,6 @@ public class Booking {
 	private Date bookedArrival; 
 	private int stayLength;
 	int numberOfOccupants;
-	int cost;
 	long confirmationNumber;
 	CreditCard creditCard;
 	
@@ -138,7 +137,7 @@ public class Booking {
 	}
 
 
-	public void addServiceCharge(ServiceType serviceType, double cosst) {
+	public void addServiceCharge(ServiceType serviceType, double cost) {
 		charges.add(new ServiceCharge(serviceType, cost));
 	}
 

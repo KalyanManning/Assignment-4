@@ -16,7 +16,7 @@ public class CheckoutCTL {
 
 	private enum State {ROOM, ACCEPT, CREDIT, CANCELLED, COMPLETED };
 	
-	private Hotel hotel;
+	Hotel hotel;
 	private State state;
 	private CheckoutUI checkoutUI;
 	double total;

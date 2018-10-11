@@ -50,6 +50,7 @@ public class Bug1Test {
     @Before
     public void setUp() throws Exception{
         hotel = HotelHelper.loadHotel();
+        control.hotel = hotel;
     }
     
     @After

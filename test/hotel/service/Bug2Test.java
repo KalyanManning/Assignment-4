@@ -61,4 +61,10 @@ public class Bug2Test {
         Booking booking = hotel.findActiveBookingByRoomId(roomId);
         assertNull(booking);
     }
+    
+    @Test
+    public void testActiveBookingsByRoomId(){
+        Booking booking = hotel.activeBookingsByRoomId.get(roomId);
+        assertNull(booking);
+    }
 }

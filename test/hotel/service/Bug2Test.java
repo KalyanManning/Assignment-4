@@ -42,6 +42,7 @@ public class Bug2Test {
     public void setUp() throws Exception{
         hotel = HotelHelper.loadHotel();
         control.hotel = hotel;
+        hotel.checkout(roomId);
     }
     
     @After

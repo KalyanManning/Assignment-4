@@ -7,6 +7,7 @@ package hotel.service;
 
 import hotel.HotelHelper;
 import hotel.entities.Hotel;
+import hotel.entities.Booking;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -55,4 +56,9 @@ public class Bug2Test {
         verify(recordServiceUI).displayMessage(mesg);
     }
     
+    @Test
+    public void testFindActiveBookingByRoomId(){
+        Booking booking = hotel.findActiveBookingByRoomId(roomId);
+        assertNull(booking);
+    }
 }
